@@ -2,12 +2,10 @@ import Sidebar from './components/Sidebar'
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <main>
         <Sidebar />
-        {}
       </main>
-      <div>{}</div>
     </div>
   )
 }
