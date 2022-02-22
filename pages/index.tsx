@@ -1,11 +1,10 @@
 import Sidebar from '../components/Sidebar'
+import Layout from '../layouts/Layout'
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="bg-black h-screen overflow-hidden">
-        <Sidebar />
-      </main>
-    </div>
+    <Layout>     
+        <Sidebar />     
+    </Layout>
   )
 }
