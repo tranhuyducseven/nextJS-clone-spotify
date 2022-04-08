@@ -1,7 +1,7 @@
 import React from 'react'
 import { getProviders } from 'next-auth/react'
 import Layout from '../layouts/Layout'
-export default function Login() {
+export default function Login({ providers }) {
   return (
     <Layout login>
       <img
@@ -9,16 +9,21 @@ export default function Login() {
         alt=""
         className="mb-5 w-64"
       />
+      {/* {Object.values(providers).map((provider) => (
+        <div>
+          <button>test</button>
+        </div>
+      ))} */}
+      {providers ? <div>true</div> : <div>false</div>}
     </Layout>
   )
 }
 
-// export async function getServerSideProps() {
-//   const providers = await getProviders()
-
-//   return {
-//     props: {
-//       providers,
-//     },
-//   }
-// }
+export async function getServerSideProps(context) {
+  const providers = await getProviders()
+  return {
+    props: {
+      providers,
+    },
+  }
+}
