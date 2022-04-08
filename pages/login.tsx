@@ -9,14 +9,13 @@ export default function Login({ providers }) {
         alt=""
         className="mb-5 w-64"
       />
-      {/* {Object.values(providers).map((provider) => (
+      {Object.values(providers).map((provider) => (
         <div>
-          <button>test</button>
+          <button className="bg-[#18D860] text-white" key={provider.id}>Login with {provider.name}</button>
         </div>
-      ))} */}
-      {providers ? <div>true</div> : <div>false</div>}
+      ))}
     </Layout>
-  )
+  ) 
 }
 
 export async function getServerSideProps(context) {

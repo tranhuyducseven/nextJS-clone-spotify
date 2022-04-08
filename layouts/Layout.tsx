@@ -8,12 +8,8 @@ export default function Layout({ login, children }) {
           rel="icon"
           href="https://cdn-icons-png.flaticon.com/512/311/311330.png"
         />
-        <meta
-          name="description"
-          content="Learn how to be software development"
-        />
+        <meta name="description" content="Enjoy the moment with spotify" />
       </Head>
-
       <main
         className={`h-screen overflow-hidden ${
           login ? 'bg-green-900' : 'bg-black'
